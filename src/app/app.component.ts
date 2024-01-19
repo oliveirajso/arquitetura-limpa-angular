@@ -41,7 +41,5 @@ export class AppComponent {
         }
       });
   }
-  ngOnInit(): void {
-    this.sidenav.opened = true;
-  }
+
 }
