@@ -42,4 +42,8 @@ export class AppComponent {
       });
   }
 
+  /*
+  Leiaute bonito
+  https://stackblitz.com/edit/material-sidenav-example?file=app%2Fsidenav-autosize-example.css
+  */
 }
