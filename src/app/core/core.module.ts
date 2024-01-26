@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 
 import { CalendarComponent } from './calendar/calendar.component';
+import { EnsureModuleLoadedOnGuard } from './ensureModuleLoadedOnceGuard';
 
 
 @NgModule({
@@ -9,4 +10,8 @@ import { CalendarComponent } from './calendar/calendar.component';
   imports: [CommonModule],
   exports: [CalendarComponent],
 })
-export class CoreModule {}
+export class CoreModule extends EnsureModuleLoadedOnGuard {
+  constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
+    super(parentModule);
+  }
+}
