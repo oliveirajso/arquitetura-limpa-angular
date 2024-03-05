@@ -22,6 +22,10 @@ export class LoggerService {
     this.logWith(this.logLevel.Error, msg);
   }
 
+  log(msg: any): void {
+    console.log(msg);
+  }
+
   private logWith(level: any, msg: string): void {
     if (level <= this.logLevel.Error) {
       switch (level) {

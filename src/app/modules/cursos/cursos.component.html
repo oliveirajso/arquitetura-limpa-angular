@@ -1,13 +1,27 @@
 <div class="container">
   Curso Ok
 </div>
-<div class="container">
-  <p>Entre com id do curso</p>
-  <input type="text"
-         name="idCurso"
-         #idCurso>
-  <a [routerLink]="['../cursos',idCurso]"> Curso com Id</a>
+<form>
+  <div class="container"
+       [formGroup]="form">
+    <p>Entre com id do curso</p>
+    <input type="text"
+           name="curso"
+           formControlName="curso" matInput>
 
 
-</div>
+    <button type="button" mat-button
+            (click)="onClickLink()"
+            name="btnComID"
+            formControlName="btnComID"> Curso com Id
+    </button>
 
+
+    <button type="button"
+            mat-button
+            (click)="teste()"
+            formControlName="btnSemID"> teste
+    </button>
+
+  </div>
+</form>
