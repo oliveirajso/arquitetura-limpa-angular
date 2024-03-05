@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { CoreModule } from '../core/core.module';
+import { CalendarioModule } from './components/calendario/calendario.module';
 import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, MaterialModule],
-  exports: [MaterialModule, CoreModule],
+  imports: [CommonModule, MaterialModule, CalendarioModule],
+  exports: [MaterialModule, CalendarioModule],
 })
 export class SharedModule {}
