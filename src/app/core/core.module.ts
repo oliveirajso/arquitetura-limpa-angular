@@ -4,10 +4,9 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CalendarComponent } from './calendar/calendar.component';
 import { EnsureModuleLoadedOnGuard } from './ensureModuleLoadedOnceGuard';
 
-
 @NgModule({
-  declarations: [CalendarComponent],
-  imports: [CommonModule],
+  declarations: [],
+  imports: [CommonModule, CalendarComponent],
   exports: [CalendarComponent],
 })
 export class CoreModule extends EnsureModuleLoadedOnGuard {
