@@ -1,3 +1,5 @@
-<pre>
-  app-calendar 2
-</pre>
+<ngx-mat-tui-calendar #tuiCalendar
+                      (userCreatedSchedule)="onUserCreatedSchedule($event)"
+                      (userUpdatedSchedule)="onUserUpdatedSchedule($event)"
+                      (userDeletedSchedule)="onUserDeletedSchedule($event)"
+                      [options]="options">
